@@ -1,0 +1,52 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "doctype",
+      "styles": {},
+      "events": []
+    },
+    {
+      "type": "docker_service",
+      "styles": {},
+      "events": [],
+      "name": "someservice",
+      "image": "node:18",
+      "children": [
+        {
+          "type": "docker_port",
+          "styles": {},
+          "events": [],
+          "host": "3000",
+          "container": "3000"
+        },
+        {
+          "type": "docker_env",
+          "styles": {},
+          "events": [],
+          "key": "KEY",
+          "value": "value"
+        }
+      ]
+    },
+    {
+      "type": "create_server",
+      "styles": {},
+      "events": [],
+      "body_limit": "1",
+      "children": [
+        {
+          "type": "res_send",
+          "styles": {},
+          "events": []
+        },
+        {
+          "type": "api_method",
+          "styles": {},
+          "events": [],
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}
